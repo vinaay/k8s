@@ -1,9 +1,9 @@
 # 00 Docker recap
 - Switch to sample-app directory  
-`cd ~/k8s-101/sample-app`
+`cd app`
 
 - Build docker image  
-`docker build -t relambda/sample-app:v1.0 .`
+`docker build -t nginx .`
     <details>
         <summary>output</summary>
 
@@ -33,7 +33,7 @@
     </details>
 
 - Push image to dockerhub  
-`docker push relambda/sample-app:v1.0`
+`docker push nginx`
 
 - Run docker container  
 `docker run -p 8001:8001 relambda/sample-app:v1.0` 
