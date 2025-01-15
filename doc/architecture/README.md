@@ -1,11 +1,11 @@
-#K8S Architecture 
+# K8S Architecture 
 
 
 
 Kubernetes is a portable, extensible, open source platform for managing containerzed workloads and services, that facilitates both declarative configuration and automation
 
 
-#Why we need Kubernetes
+# Why we need Kubernetes
 Containers are a good way to bundle and run your applications.
 Kubernetes provides you with a framework to run distributed systems resiliently. It takes care of scaling and failover for your application, provides deployment patterns
 
@@ -21,7 +21,7 @@ Kubernetes provides you with a framework to run distributed systems resiliently.
 
 
 
-#Historical context for Kubernetes
+# Historical context for Kubernetes
 ![alt text](image.png)
 
 
@@ -36,14 +36,14 @@ Kubernetes provides you with a framework to run distributed systems resiliently.
 Ref - https://kubernetes.io/docs/concepts/overview/#why-you-need-kubernetes-and-what-can-it-do
 
 
-#Cluster Architecture
+# Cluster Architecture
 
 A Kubernetes cluster consists of a control plane plus a set of worker machines, called nodes, that run containerized applications. Every cluster needs at least one worker node in order to run Pods.
 
 
 ![alt text](image-1.png)
 
-##Control plane
+## Control plane
 
 The control plane's components make global decisions about the cluster, as well as detecting and responding to cluster events 
 
@@ -63,7 +63,7 @@ The control plane's components make global decisions about the cluster, as well 
 
 
 
-##Node components
+## Node components
 
 Node components run on every node, maintaining running pods and providing the Kubernetes runtime environment.
 
