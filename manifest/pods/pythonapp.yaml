@@ -1,0 +1,28 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pythonapp
+  labels:
+    app: pythonapp
+spec:
+  containers:
+  - name: nginx
+    image: vinaay/pythonapp:v1
+    ports:
+    - containerPort: 8002
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: svc-python
+  labels:
+    app: pythonapp
+spec:
+  type: ClusterIP
+  selector:
+    app: pythonapp
+  ports:
+    - protocol: TCP
+      port: 8002
+      targetPort: 8002
