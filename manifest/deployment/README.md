@@ -13,3 +13,4 @@ A Kubernetes Deployment is a higher-level abstraction for managing applications 
 - Multi-Version Deployment: Support for blue/green or canary deployments.
 
 
+![alt text](image.png)
