@@ -10,21 +10,6 @@ spec:
   selector:
     app: nginx
   ports:
-    - protocol: TCP
-      port: 8082
-      targetPort: 8082
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: svc-echo-server
-  labels:
-    app: echo-server
-spec:
-  type: ClusterIP
-  selector:
-    app: echo-server
-  ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 80
+    - prot0col: TCP
+      port: 8002
+      targetPort: 8002

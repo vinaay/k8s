@@ -22,6 +22,8 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx:1.24
+        image: vinaay/pythonapp:v1
         ports:
-        - containerPort: 80
+        - containerPort: 8002
+
+

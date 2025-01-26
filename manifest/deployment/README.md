@@ -23,3 +23,11 @@ kubectl rollout history deployments/pythonapp -n pythonapp
 kubectl rollout history deployments/pythonapp -n pythonapp --revision=2
 kubectl rollout undo deployments/pythonapp -n pythonapp --to-revision=1
 ````
+
+
+# Deployment 
+
+````
+
+
+````
