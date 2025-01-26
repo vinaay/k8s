@@ -1,0 +1,19 @@
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: pythonapp
+  namespace: pythonapp
+spec:
+  gateways:
+    - gateway
+  hosts:
+    - 'pythonapp.abc.com'
+  http:
+    - match:
+        - uri:
+            prefix: /
+      route:
+        - destination:
+            host: pythonapp
+            port:
+              number: 8002

@@ -1,0 +1,51 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pythonapp
+  namespace: pythonapp
+  labels:
+    app: pythonappp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pythonapp
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 10%
+      maxUnavailable: 20%
+  template:
+    metadata:
+      labels:
+        app: pythonapp
+    spec:
+      containers:
+      - name: python
+        image: vinaay/pythonapp:v5
+        ports:
+        - containerPort: 8002
+        resources:
+          requests:
+            cpu: "50m"
+            memory: "128Mi"
+          limits:
+            cpu: "100m"
+            memory: "256Mi"
+---
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: pythonapp
+  namespace: pythonapp
+  labels:
+    app: pythonapp
+spec:
+  type: ClusterIP
+  selector:
+    app: pythonapp
+  ports:
+    - protocol: TCP
+      port: 8002
+      targetPort: 8002

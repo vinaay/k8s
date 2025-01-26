@@ -14,3 +14,12 @@ A Kubernetes Deployment is a higher-level abstraction for managing applications 
 
 
 ![alt text](image.png)
+
+
+# Deployment history 
+
+````
+kubectl rollout history deployments/pythonapp -n pythonapp 
+kubectl rollout history deployments/pythonapp -n pythonapp --revision=2
+kubectl rollout undo deployments/pythonapp -n pythonapp --to-revision=1
+````
