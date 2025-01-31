@@ -5,7 +5,7 @@ metadata:
   namespace: example-namespace
 spec:
   hard:
-    pods: "2"
+    pods: "10"
     requests.cpu: "4"
     requests.memory: "8Gi"
     limits.cpu: "10"
