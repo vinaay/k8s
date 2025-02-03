@@ -13,16 +13,46 @@ spec:
   volumes:
   - name: storage-volume
     persistentVolumeClaim:
-      claimName: my-pvc
+      claimName: foo-pvc
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: my-pv
+spec:
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: manual
+  hostPath:
+    path: "/mnt/data"
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: foo-pvc
 spec:
-  volumeName: my-pvc
   accessModes:
     - ReadWriteOnce
   resources:
     requests:
-      storage: 1Gi
+      storage: 500Mi
+  storageClassName: manual
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-pod1
+spec:
+  containers:
+  - name: my-container
+    image: nginx
+    volumeMounts:
+    - mountPath: "/data"
+      name: storage-volume
+  volumes:
+  - name: storage-volume
+    persistentVolumeClaim:
+      claimName: foo-pvc

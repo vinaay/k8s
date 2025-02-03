@@ -6,7 +6,7 @@ spec:
   containers:
   - image: nginx
     name: nginx
-    command: ["sh", "-c", "echo Hello from BusyBox! >> /cache && sleep 3600"]
+    command: ["sh", "-c", "echo Hello from BusyBox! >> data && sleep 200"]
     volumeMounts:
     - mountPath: /cache
       name: task-pv-storage

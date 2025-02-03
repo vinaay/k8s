@@ -27,7 +27,19 @@ kubectl rollout undo deployments/pythonapp -n pythonapp --to-revision=1
 
 # Deployment 
 
-````
+## There are two basic commonly used K8s deployment strategies we will look at in this post:
+
+- recreate 
+    Recreating deployment terminates all the pods and replaces them with the new version.
+- rolling 
+    Rolling deployments are the default K8S offering designed to reduce downtime to the cluster. A rolling deployment replaces pods running the old version of the application with the new version without downtime.
+    Readiness probes monitor when the application becomes available. If the probes fail, no traffic will be sent to the pod.
 
 
-````
+Advanced 
+- Blue/Green
+- Canary
+- A/B
+- Ramped Slow Rollout
+- Best-Effort Controlled Rollout
+- Shadow Deployment
