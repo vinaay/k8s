@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: crashloop-example
+  labels:
+    app: crashlooplearning
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: crashlooplearning
+  template:
+    metadata:
+      labels:
+        app: crashlooplearning
+    spec:
+      containers:
+      - name: crashlooplearning
+        image: vinaay/pythonapp:v2
+        ports:
+        - containerPort: 8002
+        resources:
+         limits:
+          cpu: "25m"
+          memory: "20Mi"

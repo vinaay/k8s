@@ -43,3 +43,14 @@ Advanced
 - Ramped Slow Rollout
 - Best-Effort Controlled Rollout
 - Shadow Deployment
+
+
+
+
+## PDB 
+
+A Pod Disruption Budget (PDB) is a Kubernetes policy that ensures a minimum number of replicas of an application remain available during voluntary disruptions (e.g., node upgrades, scaling events).
+
+- Ensures high availability during disruptions.
+- Prevents excessive pod evictions due to node drain, rolling updates, etc.
+- Helps maintain service reliability.

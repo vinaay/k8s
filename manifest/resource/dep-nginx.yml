@@ -1,15 +1,21 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: hpa
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: dep-nginx
-  namespace: example-namespace
+  name: dep-pythonapp
+  namespace: hpa
   labels:
-    app: nginx
+    app: pythonapp
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
-      app: nginx
+      app: pythonapp
   strategy:
     type: RollingUpdate
     rollingUpdate:
@@ -18,17 +24,36 @@ spec:
   template:
     metadata:
       labels:
-        app: nginx
+        app: pythonapp
     spec:
       containers:
-      - name: nginx
-        image: nginx:1.24
-        ports:
-        - containerPort: 80
+      - name: pythonapp
+        image: polinux/stress
+        command: ["stress"]
+        args: ["--vm", "1", "--vm-bytes", "10M", "--timeout", "300s"]
+        # image: vinaay/pythonapp:v2
+        # ports:
+        # - containerPort: 8002
         resources:
           requests:
-            cpu: "14"
-            memory: "128Mi"
+            cpu: "20m"
+            memory: "35Mi"
           limits:
-            cpu: "15"
-            memory: "256Mi"
+            cpu: "20m"
+            memory: "40Mi"
+# ---
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   name: svc-pythonapp
+#   namespace: hpa
+#   labels:
+#     app: pythonapp
+# spec:
+#   type: ClusterIP
+#   selector:
+#     app: pythonapp
+#   ports:
+#     - protocol: TCP
+#       port: 8002
+#       targetPort: 8002

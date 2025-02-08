@@ -10,7 +10,7 @@ kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/late
 helm repo add grafana https://grafana.github.io/helm-charts
 helm repo update
 
-helm install grafana grafana/grafana \
+helm install grafana grafana/grafana -n grafana --create-namespace \
   --set adminPassword=Admin@123 \
   --set service.type=NodePort
 
