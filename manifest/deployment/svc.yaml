@@ -6,7 +6,7 @@ metadata:
   labels:
     app: nginx
 spec:
-  type: ClusterIP
+  type: NodePort
   selector:
     app: nginx
   ports:
