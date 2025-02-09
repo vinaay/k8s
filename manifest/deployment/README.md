@@ -19,9 +19,9 @@ A Kubernetes Deployment is a higher-level abstraction for managing applications 
 # Deployment history 
 
 ````
-kubectl rollout history deployments/pythonapp -n pythonapp 
-kubectl rollout history deployments/pythonapp -n pythonapp --revision=2
-kubectl rollout undo deployments/pythonapp -n pythonapp --to-revision=1
+kubectl rollout history deployments/dep-nginx  
+kubectl rollout history deployments/dep-nginx --revision=2
+kubectl rollout undo deployments/dep-nginx --to-revision=1
 ````
 
 
@@ -54,3 +54,12 @@ A Pod Disruption Budget (PDB) is a Kubernetes policy that ensures a minimum numb
 - Ensures high availability during disruptions.
 - Prevents excessive pod evictions due to node drain, rolling updates, etc.
 - Helps maintain service reliability.
+
+
+
+## how to expose service in minikube 
+
+kubectl expose deployment <deployment-name> --type=NodePort --port=80
+
+
+minikube service svc-nginx
