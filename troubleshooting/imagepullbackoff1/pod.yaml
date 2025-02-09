@@ -7,6 +7,6 @@ metadata:
 spec:
   containers:
   - name: pythonapp
-    image: vinaay/pythonapp:v6
+    image: vinaay/pythonapp:v7
     ports:
     - containerPort: 8002

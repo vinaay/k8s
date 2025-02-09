@@ -30,17 +30,17 @@ spec:
       - name: pythonapp
         image: polinux/stress
         command: ["stress"]
-        args: ["--vm", "1", "--vm-bytes", "10M", "--timeout", "300s"]
+        args: ["--vm", "1", "--vm-bytes", "20M", "--timeout", "60s"]
         # image: vinaay/pythonapp:v2
         # ports:
         # - containerPort: 8002
         resources:
           requests:
-            cpu: "20m"
-            memory: "35Mi"
+            cpu: "50m"
+            memory: "50Mi"
           limits:
-            cpu: "20m"
-            memory: "40Mi"
+            cpu: "50m"
+            memory: "50Mi"
 # ---
 # apiVersion: v1
 # kind: Service
