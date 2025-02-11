@@ -1,4 +1,10 @@
 # Monitoring Grafana
+Grafana Open Source Software (OSS) enables you to query, visualize, alert on, and explore your metrics, logs, and traces wherever they’re stored.
+
+
+## Architecture 
+![alt text](image.png)
+
 
 
 

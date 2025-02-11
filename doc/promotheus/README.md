@@ -16,20 +16,10 @@ Difference between prometheus and metrics server
 ![alt text](image.png)
 
 
-## Installation 
+
+## Kube prometheus stack 
+
 
 ````
-helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
-helm repo update
-
-
-helm install prometheus prometheus-community/prometheus -n prometheus --create-namespace \
-  --set server.service.type=NodePort
-
-
-
-kubectl port-forward svc/prometheus-server 9090:80
-
-helm uninstall prometheus -n prometheus
-
+helm upgrade --install kube-prometheus-stack prometheus-community/kube-prometheus-stack -f custom-values.yaml
 ````
