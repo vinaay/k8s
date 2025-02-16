@@ -4,3 +4,7 @@ A ReplicaSet's purpose is to maintain a stable set of replica Pods running at an
 
 
 
+
+
+
+![alt text](image.png)

@@ -3,6 +3,8 @@
 A Kubernetes Deployment is a higher-level abstraction for managing applications in Kubernetes. It provides declarative updates to applications and ensures that the desired state of the application is maintained over time.
 
 
+![alt text](image-1.png)
+
 ## Key Features of Kubernetes Deployment
 - Declarative Updates: You describe the desired state of your application (e.g., number of replicas, container image) in a YAML or JSON file.
 - Self-Healing: If a pod crashes or becomes unresponsive, Kubernetes automatically replaces it.

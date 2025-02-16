@@ -15,3 +15,7 @@ kubectl apply -f nginx-pod.yaml
 
 kubectl apply -f redis-pod.yaml
 ````
+
+
+
+![alt text](image.png)
