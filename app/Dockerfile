@@ -17,4 +17,4 @@ EXPOSE 8001
 ENV FLASK_APP=main.py
 
 # Run the Flask application when the container starts
-CMD ["python", "main1.py"]
+CMD ["python", "main.py"]
