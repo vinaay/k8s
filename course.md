@@ -27,7 +27,7 @@
 - Resource management 
 - Probes 
 - Secrets and config
-- RBAC ( Service account)
+- RBAC ( Service account, role and role binding)
 - Network policy 
 - HPA and PDB
 - Helm chart
