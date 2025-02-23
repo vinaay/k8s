@@ -23,6 +23,7 @@
 - Kubernetes pod
 - Deployment  and replica set
 - stateful set and deamon set 
+- service ( Nodeport, clusterIP and loadbalancer)
 - persistent volume and volume mount 
 - Resource management 
 - Probes 
