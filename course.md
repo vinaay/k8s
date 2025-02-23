@@ -1,3 +1,30 @@
+# Course content 
+- Docker Basics
+- Docker architecture
+- Docker commends
+- How to write the docker file 
+- How to build the image and push to docker registory ss
+- Docker volume
+
+# Kubernetes
+- what / why  to use kubernetes
+- Architecture
+- Kubernetes pod
+- Deployment  and replica set
+- stateful set and deamon set 
+- persistent volume and volume mount 
+- RBAC ( Service account)
+- Network policy 
+- HPA and PDB
+- Real world deployment - End to end application deployment 
+- Troubleshooting.s
+
+
+
+
+
+
+
 # 00 Docker recap
 - Switch to sample-app directory  
 `cd app`
