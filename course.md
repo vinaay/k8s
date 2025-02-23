@@ -1,9 +1,9 @@
 # Course content 
 - Docker Basics
 - Docker architecture
-- Docker commends
+- Docker commands
 - How to write the docker file 
-- How to build the image and push to docker registory ss
+- How to build the image and push to docker registory 
 - Docker volume
 
 
