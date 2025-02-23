@@ -6,22 +6,38 @@
 - How to build the image and push to docker registory ss
 - Docker volume
 
+
+
+![alt text](image-1.png)
+
+
+![alt text](image.png)
+
+
+
+
 # Kubernetes
 - what / why  to use kubernetes
 - Architecture
+- Setup lab env ( Minikube / On top of VM / Manage k8s (EKS, AKS) ) 
 - Kubernetes pod
 - Deployment  and replica set
 - stateful set and deamon set 
 - persistent volume and volume mount 
+- Resource management 
+- Probes 
+- Secrets and config
 - RBAC ( Service account)
 - Network policy 
 - HPA and PDB
+- Helm chart
+- Observability ( logging, monitoring and alerting )
 - Real world deployment - End to end application deployment 
-- Troubleshooting.s
+- Troubleshooting
 
 
 
-
+![alt text](image-2.png)
 
 
 
